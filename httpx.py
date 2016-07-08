@@ -1,11 +1,5 @@
 #-*- coding: UTF-8 -*-
 
-
-from sys import version_info
-if version_info.major == 2:
-    print('[ERROR]$> Python 3 required.')
-    exit( 0 )
-
 import gzip
 import re
 import time
@@ -17,7 +11,7 @@ from urllib import parse
 #import tempfile
 #import threading
 #import zlib
-#from gc import collect
+
 
 __version__ = '2.1.2.2016613'
 
