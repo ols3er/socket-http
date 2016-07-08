@@ -179,7 +179,7 @@ class ResponseHandler:
                 return None
         return __cat_buffer
 
-    def __default_content_encode_processor(data):
+    def __default_content_encode_processor(self,data):
         return data
     
     def __http_header(self,key):
@@ -311,7 +311,7 @@ __base_headers = {
     'Host':None,
     'User-Agent':__default_user_agent,
     'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Encoding':'gzip, deflate',
+    'Accept-Encoding':'gzip',
     'Connection':'keep-alive'
     }
 __base_connector = BaseConnector('0.0.0.0',80)
