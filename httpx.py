@@ -293,7 +293,7 @@ class EventRecorder:
         
     def write(self,message,**kwargs):
         with open(LOG_FILE,'a+') as streamout:
-            strftime = time.strftime('[%F@%T]')
+            strftime = time.strftime('[%c]')
             _string_args = EMPTY_STR
             for key in kwargs:
                 _string_args += \
