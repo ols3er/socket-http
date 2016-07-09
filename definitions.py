@@ -45,7 +45,7 @@ LOG_FILE          =   'httx.log'     # error log file
 
 _rex_ALL_url = re.compile(r'https?://([\w\.-]+\w+)(:\d+)?(.+)?')
 _rex_http_status_line = re.compile(r'HTTP/(...) (...)')
-_rex_header_kv = re.compile('([\w-]+): (.+)')
+_rex_header_kv = re.compile('([\w-]+): ?(.+)')
 
 __charsets = ['utf-8','gbk','ascii','ISO-8859-1']
 
