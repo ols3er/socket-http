@@ -5,7 +5,11 @@ import re
 import time
 import ssl
 from socket import AF_INET,SOCK_STREAM,socket,getaddrinfo
-from urllib import parse
+try:
+    from urllib.parse import urlencode  # Version: Python 3.x
+except ImportError:
+    from urllib import urlencode  # Version: Python 2.X
+
 
 #import os
 #import tempfile
@@ -13,7 +17,7 @@ from urllib import parse
 #import zlib
 
 
-__version__ = '2.1.3.2016714'
+__version__ = '2.1.4.20160827'
 
 #-------------------------------------------------------------------------------------#
 #                   (C) 2015 by ZhangYiDa <http://www.loogi.cn>                       #
@@ -341,7 +345,7 @@ def urlopen(url,postdata = None,
     
     __is_post = True if postdata else False
     if postdata is not None:
-        __post_data = parse.urlencode(postdata)    
+        __post_data = urlencode(postdata)    
     
     __temp_headers['Host'] = get_host_str(url)
     if __is_post:
